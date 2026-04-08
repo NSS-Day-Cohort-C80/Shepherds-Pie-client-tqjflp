@@ -1,17 +1,17 @@
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 
 const Navbar = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation()
+  const navigate = useNavigate()
 
   // if (location.pathname === "/login" || location.pathname === "/") return null;
 
-  const user = localStorage.getItem("learning_user");
+  const user = localStorage.getItem("shepherd_employee")
 
   const handleLogout = () => {
-    localStorage.removeItem("learning_user");
-    navigate("/login");
-  };
+    localStorage.removeItem("shepherd_employee")
+    navigate("/login")
+  }
 
   return (
     <nav>
@@ -27,14 +27,12 @@ const Navbar = () => {
 
         {user ? (
           <li>
-            <button onClick={handleLogout}>
-              Logout
-            </button>
+            <button onClick={handleLogout}>Logout</button>
           </li>
         ) : null}
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
