@@ -33,7 +33,7 @@ export const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <h1 className="login-title">Shepherd's Pies</h1>
-        <p>Employee sign in</p>
+        <p className="login-subtitle">Employee sign in</p>
         <form onSubmit={handleLogin}>
           <input
             type="text"
@@ -41,9 +41,9 @@ export const Login = () => {
             onChange={(event) => setUsername(event.target.value)}
             placeholder="Username"
             required
-            className="form-control"
+            className="login-input"
           />
-          <button type="submit" className="btn-primary">
+          <button type="submit" className="login-btn">
             Sign in
           </button>
         </form>
