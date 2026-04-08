@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-// import Login from "./components/auth/Login";
+import { Login } from "./components/auth/Login";
 // import Order from "./components/Order"
 import Navbar from "./components/nav/Navbar.jsx"
 import "./App.css";
-const Login = () => <div>Login Page</div>;
 const Receipts = () => <div>Receipts Page</div>;
 const Order = () => <div>Order Page</div>;
 function App() {
