@@ -1,42 +1,161 @@
 {
   "employees": [
-    { "id": 0, "fullName": "Joe Smith", "username": "joe" },
-    { "id": 1, "fullName": "Alice Johnson", "username": "alice" },
-    { "id": 2, "fullName": "Bob Williams", "username": "bob" },
-    { "id": 3, "fullName": "Carol Davis", "username": "carol" },
-    { "id": 4, "fullName": "David Brown", "username": "david" }
+    {
+      "id": 0,
+      "fullName": "Joe Smith",
+      "username": "joe"
+    },
+    {
+      "id": 1,
+      "fullName": "Alice Johnson",
+      "username": "alice"
+    },
+    {
+      "id": 2,
+      "fullName": "Bob Williams",
+      "username": "bob"
+    },
+    {
+      "id": 3,
+      "fullName": "Carol Davis",
+      "username": "carol"
+    },
+    {
+      "id": 4,
+      "fullName": "David Brown",
+      "username": "david"
+    }
   ],
   "sizes": [
-    { "id": 1, "name": "Small", "cost": 8 },
-    { "id": 2, "name": "Medium", "cost": 10 },
-    { "id": 3, "name": "Large", "cost": 12 }
+    {
+      "id": 1,
+      "name": "Kids",
+      "cost": 6
+    },
+    {
+      "id": 2,
+      "name": "Small",
+      "cost": 8
+    },
+    {
+      "id": 3,
+      "name": "Medium",
+      "cost": 10
+    },
+    {
+      "id": 4,
+      "name": "Large",
+      "cost": 12
+    },
+    {
+      "id": 5,
+      "name": "Extra Large",
+      "cost": 18
+    }
   ],
   "cheeses": [
-    { "id": 1, "name": "Mozzarella" },
-    { "id": 2, "name": "Buffalo Mozzarella" },
-    { "id": 3, "name": "Four Cheese" },
-    { "id": 4, "name": "Vegan" },
-    { "id": 5, "name": "Ricotta" },
-    { "id": 6, "name": "None (cheeseless)" }
+    {
+      "id": 1,
+      "name": "Mozzarella"
+    },
+    {
+      "id": 2,
+      "name": "Buffalo Mozzarella"
+    },
+    {
+      "id": 3,
+      "name": "Four Cheese"
+    },
+    {
+      "id": 4,
+      "name": "Vegan"
+    },
+    {
+      "id": 5,
+      "name": "Ricotta"
+    },
+    {
+      "id": 6,
+      "name": "None (cheeseless)"
+    }
   ],
   "sauces": [
-    { "id": 1, "name": "Marinara" },
-    { "id": 2, "name": "Arrabbiata" },
-    { "id": 3, "name": "Garlic White" },
-    { "id": 4, "name": "Diavolo" },
-    { "id": 5, "name": "None (sauceless pizza)" }
+    {
+      "id": 1,
+      "name": "Marinara"
+    },
+    {
+      "id": 2,
+      "name": "Arrabbiata"
+    },
+    {
+      "id": 3,
+      "name": "Garlic White"
+    },
+    {
+      "id": 4,
+      "name": "Diavolo"
+    },
+    {
+      "id": 5,
+      "name": "None (sauceless pizza)"
+    }
   ],
   "toppings": [
-    { "id": 1, "name": "Sausage", "cost": 1 },
-    { "id": 2, "name": "Pepperoni", "cost": 1 },
-    { "id": 3, "name": "Mushroom", "cost": 0.50 },
-    { "id": 4, "name": "Onion", "cost": 0.50 },
-    { "id": 5, "name": "Green pepper", "cost": 0.50 },
-    { "id": 6, "name": "Black olive", "cost": 0.50 },
-    { "id": 7, "name": "Basil", "cost": 0.50 },
-    { "id": 8, "name": "Extra cheese", "cost": 1 }
+    {
+      "id": 1,
+      "name": "Sausage",
+      "cost": 1
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni",
+      "cost": 1
+    },
+    {
+      "id": 3,
+      "name": "Mushroom",
+      "cost": 0.5
+    },
+    {
+      "id": 4,
+      "name": "Onion",
+      "cost": 0.5
+    },
+    {
+      "id": 5,
+      "name": "Green pepper",
+      "cost": 0.5
+    },
+    {
+      "id": 6,
+      "name": "Black olive",
+      "cost": 0.5
+    },
+    {
+      "id": 7,
+      "name": "Basil",
+      "cost": 0.5
+    },
+    {
+      "id": 8,
+      "name": "Extra cheese",
+      "cost": 1
+    }
   ],
-  "pizzas": [],
+  "pizzas": [
+    {
+      "id": 1775679784452,
+      "size": "Large",
+      "cheese": "Four Cheese",
+      "sauce": "Marinara",
+      "toppings": [
+        "Pepperoni",
+        "Black olive"
+      ],
+      "price": 13.5
+    }
+  ],
   "pizzaToppings": [],
   "orders": []
 }
