@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Outlet, Route, Routes } from "react-router-dom"
-import { Navbar } from "../components/nav/Navbar"
+import Navbar from "../components/nav/Navbar.jsx"
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState(null)
