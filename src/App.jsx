@@ -1,16 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import { Login } from "./components/auth/Login";
-// import Order from "./components/Order"
+import Order from "./components/orders/Order"
 import Navbar from "./components/nav/Navbar.jsx"
 import "./App.css";
 const Receipts = () => <div>Receipts Page</div>;
-const Order = () => <div>Order Page</div>;
 function App() {
   return (
     <>
       <div className="App">Shepherd's Pies</div>
         <Navbar />
-
+        
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/receipts" element={<Receipts />} />
