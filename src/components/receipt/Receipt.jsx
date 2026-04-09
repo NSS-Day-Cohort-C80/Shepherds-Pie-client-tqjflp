@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../nav/Navbar";
 import { getOrdersByEmployeeId } from "../../services/orderService";
 import { getEmployeesById } from "../../services/employeeService";
 import "./Receipts.css";
@@ -40,7 +39,6 @@ const Receipts = ({ currentUser }) => {
 
   return (
     <>
-      <Navbar />
       <div className="receipts-container">
         <div className="receipts-header">
           <h1>Receipts</h1>
