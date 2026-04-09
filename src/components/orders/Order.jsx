@@ -123,14 +123,17 @@ const calcPizzaPrice = () => {
                             toppings: selectedToppings.map((id) => pizzaToppings.find((t) => t.id ===parseInt(id))?.name).filter(Boolean),
                             price: pizzaPrice,
 	                    }
-                        createPizza(newPizza).then(()=>{
+
+                        const cart = JSON.parse(localStorage.getItem("cart")) || []
+                        cart.push(newPizza)
+                        localStorage.setItem("cart", JSON.stringify(cart))
                             alert("Pizza added!")
                             setSelectedSize(null)
                             setSelectedCheese(null)
                             setSelectedSauce(null)
                             setSelectedToppings([])
-                        })
-                    }
+                        }
+                    
                 }}>
                     Add Pizza
                 </button>
