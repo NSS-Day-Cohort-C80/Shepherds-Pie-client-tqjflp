@@ -1,15 +1,19 @@
 :root {
   --primary: #a10000;
   --secondary: #ffc629;
-  --info: #a10000;
-  --warning: red;
+  --info: #be6666;
+  --warning: rgb(216, 61, 61);
   --white: #ffffff;
   --offWhite: #f2f2f3;
   --dark: #3b3b3b;
   --outline: #c3c0c0;
-  --appBackground: #e8e8e8;
+  --appBackground: #201e1e;
   --cardBackground: #d4d4d4;
   --metaText: #6b6b6b;
+}
+
+* {
+  cursor: url('/IMG_2138.png'), auto;
 }
 
 body {
@@ -32,6 +36,7 @@ section {
 
 body {
   line-height: 1;
+  background-color: #ffa4a48a;
 }
 
 table {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 //import { getEmployees } from "../../services/employeeService"
 import { getCheeses, getSauces, getSizes, getToppings } from "../../services/menuService"
 import { createPizza } from "../../services/orderService"
+import "../orders/Order.css"
 
 const Order = ({ currentUser }) => {
 const [pizzaSizes, setPizzaSizes] = useState([])
@@ -12,10 +13,14 @@ const [selectedCheese, setSelectedCheese] = useState(null)
 const [selectedSauce, setSelectedSauce] = useState(null)
 const [selectedSize, setSelectedSize] = useState(null)
 const [selectedToppings, setSelectedToppings] = useState([])
+const [cart, setCart] = useState([])
 // const [driverEmployees, setDriverEmployees] = useState([])
 
 
-
+useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || []
+    setCart(savedCart)
+}, [])
 
 
 useEffect(() => {
@@ -39,8 +44,8 @@ const calcPizzaPrice = () => {
 
 
     return (
-        <>
-            <div name="pizzaSizes">
+        <div className="pizza-builder">
+            <div className="pizza-section">
                 <h3>Sizes</h3>
                 {pizzaSizes.map((size) => (
                     <label key={size.id}>
@@ -55,7 +60,7 @@ const calcPizzaPrice = () => {
                     </label>
                 ))}
             </div>
-            <div name="pizzaCheese">
+            <div className="pizza-section">
                 <h3>Cheese</h3>
                 {pizzaCheese.map((cheese) => (
                     <label key={cheese.id}>
@@ -70,7 +75,7 @@ const calcPizzaPrice = () => {
                     </label>
                 ))}
             </div>
-            <div name="pizzaSauce">
+            <div className="pizza-section">
                 <h3>Sauces</h3>
                 {pizzaSauce.map((sauce) => (
                     <label key={sauce.id}>
@@ -85,7 +90,7 @@ const calcPizzaPrice = () => {
                     </label>
                 ))}
             </div>
-            <div name="toppings">
+            <div className="pizza-section">
                 <h3>Toppings</h3>
                 {pizzaToppings.map((topping) => (
                 <label key={topping.id}>
@@ -106,8 +111,18 @@ const calcPizzaPrice = () => {
                 </label>
                 ))}
             </div>
-            <div name="orderButton">
+            {cart.length > 0 ? (
+            <div className="cart-preview">
+                <h3>Current Order ({cart.length} pizzas)</h3>
+                {cart.map((pizza) => (
+                    <div key={pizza.id}>{pizza.size} - ${pizza.price}</div>
+                ))}
+            </div>
+        ) : null}
+            
+            <div className="button-div">
                 <button
+                className="checkout-button"
                 onClick={() => {
                     if (!selectedSize || !selectedCheese || !selectedSauce) 
                     {
@@ -128,6 +143,7 @@ const calcPizzaPrice = () => {
                         cart.push(newPizza)
                         localStorage.setItem("cart", JSON.stringify(cart))
                             alert("Pizza added!")
+                            setCart([...cart])
                             setSelectedSize(null)
                             setSelectedCheese(null)
                             setSelectedSauce(null)
@@ -137,8 +153,13 @@ const calcPizzaPrice = () => {
                 }}>
                     Add Pizza
                 </button>
-            </div>
-        </>
+                </div>
+                <div>
+                    <button onClick={() => navigate("/orderSummary")}>
+                        View Cart
+                    </button>
+                </div>
+        </div>
     )
 }
 

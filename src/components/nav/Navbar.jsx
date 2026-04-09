@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul>
-        <h2 className="navbar-title">Pizza Portal</h2>
+        <h2 className="navbar-title">Shepherd's Pies Pizza Portal</h2>
         <ul className="navbar-links" />
         <li className="navbar-item">
           <NavLink to="/receipts">Receipts</NavLink>

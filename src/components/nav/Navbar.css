@@ -71,3 +71,8 @@
 .navbar-logout button:hover {
     opacity: 0.8;
 }
+
+.navbar-title {
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
