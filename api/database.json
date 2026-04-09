@@ -144,30 +144,6 @@
     }
   ],
   "pizzas": [
-    {
-      "id": 1775679784452,
-      "size": "Large",
-      "cheese": "Four Cheese",
-      "sauce": "Marinara",
-      "toppings": [
-        "Pepperoni",
-        "Black olive"
-      ],
-      "price": 13.5
-    },
-    {
-      "id": 1775680885901,
-      "size": "Medium",
-      "cheese": "Buffalo Mozzarella",
-      "sauce": "Garlic White",
-      "toppings": [
-        "Basil",
-        "Mushroom",
-        "Pepperoni",
-        "Green pepper"
-      ],
-      "price": 12.5
-    }
   ],
   "pizzaToppings": [],
   "orders": []
