@@ -20,9 +20,14 @@ export const Login = () => {
           "shepherd_employee",
           JSON.stringify({
             id: foundEmployee.id,
+            fullName: foundEmployee.fullName,
           }),
         )
+        if (foundEmployee.id === 1) {
+          navigate("/receipts")
+        } else {
         navigate("/order")
+        }
       } else {
         window.alert("Invalid Login")
       }

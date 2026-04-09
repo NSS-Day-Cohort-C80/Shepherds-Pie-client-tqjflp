@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../nav/Navbar";
 import { createOrder, createPizza } from "../../services/orderService";
 import { getEmployees } from "../../services/employeeService";
 import "./Order.css"

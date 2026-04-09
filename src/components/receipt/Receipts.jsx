@@ -1,30 +1,49 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getOrdersByEmployeeId } from "../../services/orderService";
-import { getEmployeesById } from "../../services/employeeService";
-import "./Receipts.css";
+import { getOrders } from "../../services/orderService";
+import { getEmployees } from "../../services/employeeService";
+import "./Receipts.css"
+
 
 const Receipts = ({ currentUser }) => {
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
+  const [employees, setEmployees] = useState([])
   const [employeeName, setEmployeeName] = useState("");
 
   useEffect(() => {
-    if (!currentUser?.id) {
-      navigate("/login");
-      return;
-    }
+    if (currentUser?.id === undefined || currentUser?.id === null) {
+      navigate("/login")
+      return
+  }
 
-    getEmployeesById(currentUser.id).then((employees) => {
-      if (employees.length > 0) {
-        setEmployeeName(employees[0].fullName);
-      }
-    });
+//   getEmployees().then((employees) => {
+//     const found = employees.find((emp) => emp.id === currentUser.id)
+//     if (found) {
+//         setEmployeeName(found.fullName)
+//     }
+//     setEmployees(employees)
+// })
 
-    getOrdersByEmployeeId(currentUser.id).then((fetchedOrders) => {
-      setOrders(fetchedOrders);
-    });
-  }, [currentUser, navigate]);
+//TODO: possible cause for employee issue
+getEmployees().then((allEmployees) => {
+  const found = allEmployees.find((employee) => employee.id === currentUser.id)
+  if (found) {
+      setEmployeeName(found.fullName)
+  }
+  setEmployees(allEmployees)
+})
+
+
+getOrders().then(setOrders)
+}, [currentUser, navigate])
+
+  useEffect(() => {
+    if (!currentUser?.id || employees.length === 0) return;
+
+    const found = employees.find((employee) => employee.id === currentUser.id);
+    setEmployeeName(found ? found.fullName : "");
+  }, [currentUser, employees]);
 
   const calculateOrderTotal = (order) => {
     let total = 0;
@@ -36,7 +55,7 @@ const Receipts = ({ currentUser }) => {
     }
     return total.toFixed(2);
   };
-
+// TODO: FIND JOE :C
   return (
     <>
       <div className="receipts-container">
@@ -53,7 +72,11 @@ const Receipts = ({ currentUser }) => {
                 <th>Time/Date</th>
                 <th>Cost</th>
                 <th>Tip</th>
+        
+                
                 <th>Delivery?</th>
+                <th>Taken By</th>
+                <th>Driver</th>
               </tr>
             </thead>
             <tbody>
@@ -64,8 +87,12 @@ const Receipts = ({ currentUser }) => {
                     {order.time} {order.date}
                   </td>
                   <td>${calculateOrderTotal(order)}</td>
-                  <td>${order.tip ? order.tip.toFixed(2) : "0.00"}</td>
+                  <td>${order.tip ? order.tip : "0.00"}</td>
                   <td>{order.delivererId ? "Yes" : "No"}</td>
+                  <td>{order.employee?.fullName}</td>
+                  <td>{order.delivererId 
+                    ? employees.find((employee) => employee.id === order.delivererId)?.fullName 
+                    : "N/A"}</td>
                 </tr>
               ))}
             </tbody>

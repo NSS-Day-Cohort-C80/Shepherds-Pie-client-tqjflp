@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react"
-import { Outlet, Route, Routes } from "react-router-dom"
+import { Outlet, Route, Routes, useLocation, useNavigate } from "react-router-dom"
 import Navbar from "../components/nav/Navbar.jsx"
 import Order from "../components/orders/Order.jsx"
+import OrderSummary from "../components/orders/OrderSummary.jsx"
+import Receipts from "../components/receipt/Receipts.jsx"
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState(null)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const localShepherdEmployee = localStorage.getItem("shepherd_employee")
     const shepherdEmployeeObject = JSON.parse(localShepherdEmployee)
     setCurrentUser(shepherdEmployeeObject)
-  }, [])
+  }, [location])
 
-  if (!currentUser) return null
-  //placeholder divs will need real components, ex
-  //<Route path="receipts/id" element={<OrderSummary currentUser={currentUser} />} />, would show full details of clicked order
+  if (!currentUser) {
+    navigate("/login")
+  }
+
   return (
     <Routes>
       <Route
@@ -28,8 +33,8 @@ export const ApplicationViews = () => {
       >
         <Route index element={<div>Home</div>} />
         <Route path="order" element={<Order currentUser={currentUser} />} />
-        <Route path="order-summary" element={<OrderSummary currentUser={currentUser} />} />
-        <Route path="receipts" element={<div>Receipts</div>} />
+        <Route path="orderSummary" element={<OrderSummary currentUser={currentUser} />} />
+        <Route path="receipts" element={<Receipts currentUser={currentUser} />} />
       </Route>
     </Routes>
   )

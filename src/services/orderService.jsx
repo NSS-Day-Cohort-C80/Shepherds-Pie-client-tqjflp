@@ -1,7 +1,6 @@
 export const getOrders = () => {
-  return fetch(`http://localhost:8088/orders`).then((res) => res.json())
-}
-
+    return fetch(`http://localhost:8088/orders?_embed=pizzas&_expand=employee`).then((res) => res.json())
+  }
 //will need to add ?_expand=employee&_embed=pizzas when we need order totals
 export const getOrderById = (id) => {
   return fetch(`http://localhost:8088/orders/${id}?_expand=employee`).then(
@@ -10,10 +9,10 @@ export const getOrderById = (id) => {
 }
 
 export const getOrdersByEmployeeId = (employeeId) => {
-  return fetch(`http://localhost:8088/orders?employeeId=${employeeId}`).then(
+    return fetch(`http://localhost:8088/orders?employeeId=${employeeId}&_embed=pizzas&_expand=employee`).then(
     (res) => res.json(),
-  )
-}
+    )
+  }
 
 export const createOrder = (order) => {
     return fetch(`http://localhost:8088/orders`, {
