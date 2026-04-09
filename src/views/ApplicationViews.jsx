@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Outlet, Route, Routes } from "react-router-dom"
 import Navbar from "../components/nav/Navbar.jsx"
+import Order from "../components/orders/Order.jsx"
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState(null)
@@ -26,9 +27,9 @@ export const ApplicationViews = () => {
         }
       >
         <Route index element={<div>Home</div>} />
-        <Route path="order" element={<div>Orders</div>} />
+        <Route path="order" element={<Order currentUser={currentUser} />} />
+        <Route path="receipts" element={<div>Receipts</div>} />
       </Route>
-      <Route path="receipts" element={<div>Receipts</div>} />
     </Routes>
   )
 }
