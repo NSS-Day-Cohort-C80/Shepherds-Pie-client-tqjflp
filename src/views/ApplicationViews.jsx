@@ -28,6 +28,7 @@ export const ApplicationViews = () => {
       >
         <Route index element={<div>Home</div>} />
         <Route path="order" element={<Order currentUser={currentUser} />} />
+        <Route path="order-summary" element={<OrderSummary currentUser={currentUser} />} />
         <Route path="receipts" element={<div>Receipts</div>} />
       </Route>
     </Routes>

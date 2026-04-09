@@ -22,7 +22,7 @@ export const createOrder = (order) => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(order),
-    })
+    }).then((res) => res.json())
 }
 
 export const editOrder = (order) => {

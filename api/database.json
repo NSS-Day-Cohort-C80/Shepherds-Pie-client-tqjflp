@@ -104,71 +104,77 @@
   "toppings": [
     {
       "id": 1,
-      "name": "Sausage",
+      "name": "Sausage + $1",
       "cost": 1
     },
     {
       "id": 2,
-      "name": "Pepperoni",
+      "name": "Pepperoni + $1",
       "cost": 1
     },
     {
       "id": 3,
-      "name": "Mushroom",
+      "name": "Mushroom + $0.50",
       "cost": 0.5
     },
     {
       "id": 4,
-      "name": "Onion",
+      "name": "Onion + $0.50",
       "cost": 0.5
     },
     {
       "id": 5,
-      "name": "Green pepper",
+      "name": "Green pepper + $0.50",
       "cost": 0.5
     },
     {
       "id": 6,
-      "name": "Black olive",
+      "name": "Black olive + $0.50",
       "cost": 0.5
     },
     {
       "id": 7,
-      "name": "Basil",
+      "name": "Basil + $0.50",
       "cost": 0.5
     },
     {
       "id": 8,
-      "name": "Extra cheese",
+      "name": "Extra cheese + $1",
       "cost": 1
     }
   ],
   "pizzas": [
     {
-      "id": 1775679784452,
-      "size": "Large",
-      "cheese": "Four Cheese",
-      "sauce": "Marinara",
-      "toppings": [
-        "Pepperoni",
-        "Black olive"
-      ],
-      "price": 13.5
-    },
-    {
-      "id": 1775680885901,
+      "id": 1775762155987,
       "size": "Medium",
-      "cheese": "Buffalo Mozzarella",
+      "cheese": "Four Cheese",
       "sauce": "Garlic White",
       "toppings": [
-        "Basil",
-        "Mushroom",
-        "Pepperoni",
-        "Green pepper"
+        "Pepperoni + $1"
       ],
-      "price": 12.5
+      "price": 11,
+      "orderId": 1
     }
   ],
   "pizzaToppings": [],
-  "orders": []
+  "orders": [
+    {
+      "employeeId": 1,
+      "delivererId": null,
+      "date": "4/9/2026",
+      "time": "2:20:52 PM",
+      "tip": "2.75",
+      "tableId": null,
+      "id": 1
+    },
+    {
+      "employeeId": 1,
+      "delivererId": null,
+      "date": "4/9/2026",
+      "time": "2:23:34 PM",
+      "tip": "0.00",
+      "tableId": null,
+      "id": 2
+    }
+  ]
 }
