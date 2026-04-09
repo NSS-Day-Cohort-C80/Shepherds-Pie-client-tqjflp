@@ -144,17 +144,6 @@
     }
   ],
   "pizzas": [
-    {
-      "id": 1775762155987,
-      "size": "Medium",
-      "cheese": "Four Cheese",
-      "sauce": "Garlic White",
-      "toppings": [
-        "Pepperoni + $1"
-      ],
-      "price": 11,
-      "orderId": 1
-    }
   ],
   "pizzaToppings": [],
   "orders": [
