@@ -9,41 +9,22 @@ const Receipts = ({ currentUser }) => {
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
   const [employees, setEmployees] = useState([])
-  const [employeeName, setEmployeeName] = useState("");
+ 
 
   useEffect(() => {
-    if (currentUser?.id === undefined || currentUser?.id === null) {
-      navigate("/login")
-      return
-  }
+    if (!currentUser?.id) {
+      navigate("/login");
+      return;
+    }
 
-//   getEmployees().then((employees) => {
-//     const found = employees.find((emp) => emp.id === currentUser.id)
-//     if (found) {
-//         setEmployeeName(found.fullName)
-//     }
-//     setEmployees(employees)
-// })
+  getEmployees().then(setEmployees);
+    getOrders().then(setOrders);
+  }, [currentUser, navigate]);
 
-//TODO: possible cause for employee issue
-getEmployees().then((allEmployees) => {
-  const found = allEmployees.find((employee) => employee.id === currentUser.id)
-  if (found) {
-      setEmployeeName(found.fullName)
-  }
-  setEmployees(allEmployees)
-})
-
-
-getOrders().then(setOrders)
-}, [currentUser, navigate])
-
-  useEffect(() => {
-    if (!currentUser?.id || employees.length === 0) return;
-
-    const found = employees.find((employee) => employee.id === currentUser.id);
-    setEmployeeName(found ? found.fullName : "");
-  }, [currentUser, employees]);
+  const employeeName =
+    currentUser?.fullName ||
+    employees.find((employee) => employee.id === currentUser?.id)?.fullName ||
+    "";
 
   const calculateOrderTotal = (order) => {
     let total = 0;

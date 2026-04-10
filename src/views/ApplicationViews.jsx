@@ -4,21 +4,25 @@ import Navbar from "../components/nav/Navbar.jsx"
 import Order from "../components/orders/Order.jsx"
 import OrderSummary from "../components/orders/OrderSummary.jsx"
 import Receipts from "../components/receipt/Receipts.jsx"
+import { Login } from "../components/auth/Login.jsx"
 
-export const ApplicationViews = () => {
-  const [currentUser, setCurrentUser] = useState(null)
+export const ApplicationViews = ({ currentUser }) => {
   const location = useLocation()
   const navigate = useNavigate()
 
-  useEffect(() => {
+  /* useEffect(() => {
     const localShepherdEmployee = localStorage.getItem("shepherd_employee")
     const shepherdEmployeeObject = JSON.parse(localShepherdEmployee)
     setCurrentUser(shepherdEmployeeObject)
-  }, [location])
+  }, [location]) 
 
   if (!currentUser) {
-    navigate("/login")
-  }
+    navigate("/Login")
+  } */
+
+
+// useEffect (() => {
+//   if (!currentUser) {navigate("/Login")}}, [])
 
   return (
     <Routes>
@@ -31,7 +35,6 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route index element={<div>Home</div>} />
         <Route path="order" element={<Order currentUser={currentUser} />} />
         <Route path="orderSummary" element={<OrderSummary currentUser={currentUser} />} />
         <Route path="receipts" element={<Receipts currentUser={currentUser} />} />

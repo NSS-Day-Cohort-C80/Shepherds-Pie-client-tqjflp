@@ -155,9 +155,12 @@ const calcPizzaPrice = () => {
                 }}>
                     Add Pizza
                 </button>
-                </div>
-                <div>
-                    <button onClick={() => navigate("/orderSummary")}>
+            </div>
+                <div className="button-div">
+                    <button 
+                    className="checkout-button"
+                    onClick={() => navigate("/orderSummary")}
+                    >
                         View Cart
                     </button>
                 </div>

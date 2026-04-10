@@ -1,11 +1,11 @@
-import { NavLink, useLocation, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import "./Navbar.css"
 
 const Navbar = () => {
  // const location = useLocation()
   const navigate = useNavigate()
 
-  // if (location.pathname === "/login" || location.pathname === "/") return null;
+ // if (location.pathname === "/login" || location.pathname === "/") return null;
 
   const user = localStorage.getItem("shepherd_employee")
 
