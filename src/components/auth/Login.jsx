@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { getEmployees } from "../../services/employeeService"
 import "./Login.css"
 
-export const Login = () => {
+export const Login = ({setCurrentUser}) => {
   const [username, setUsername] = useState("")
   const navigate = useNavigate()
 
@@ -16,19 +16,20 @@ export const Login = () => {
       )
 
       if (foundEmployee) {
-        localStorage.setItem(
-          "shepherd_employee",
-          JSON.stringify({
+          const userObject = {
             id: foundEmployee.id,
             fullName: foundEmployee.fullName,
-          }),
-        )
-        if (foundEmployee.id === 1) {
-          navigate("/receipts")
-        } else {
-        navigate("/order")
-        }
-      } else {
+          };
+
+          localStorage.setItem("shepherd_employee", JSON.stringify(userObject));
+          setCurrentUser(userObject);
+
+          if (foundEmployee.id === 1) {
+            navigate("/receipts");
+          } else {
+            navigate("/order");
+          }
+        }else {
         window.alert("Invalid Login")
       }
     })
