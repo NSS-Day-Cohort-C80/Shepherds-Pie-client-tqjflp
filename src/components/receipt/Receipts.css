@@ -1,0 +1,67 @@
+.receipts-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.receipts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.receipts-header h1 {
+    color: var(--primary);
+    margin: 0;
+}
+
+.logged-in-user {
+    color: var(--metaText);
+    font-size: 0.9rem;
+}
+
+.receipts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--offWhite);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.receipts-table thead {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.receipts-table th {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.receipts-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--outline);
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+.receipts-table tbody tr:hover {
+    background-color: var(--cardBackground);
+    cursor: pointer;
+}
+
+.receipts-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.no-orders {
+    text-align: center;
+    color: var(--metaText);
+    margin-top: 2rem;
+}

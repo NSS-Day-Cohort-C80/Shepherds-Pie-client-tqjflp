@@ -1,0 +1,309 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "Joe Smith",
+      "username": "joe"
+    },
+    {
+      "id": 2,
+      "fullName": "Alice Johnson",
+      "username": "alice"
+    },
+    {
+      "id": 3,
+      "fullName": "Bob Williams",
+      "username": "bob"
+    },
+    {
+      "id": 4,
+      "fullName": "Carol Davis",
+      "username": "carol"
+    },
+    {
+      "id": 5,
+      "fullName": "David Brown",
+      "username": "david"
+    }
+  ],
+  "sizes": [
+    {
+      "id": 1,
+      "name": "Kids",
+      "cost": 6
+    },
+    {
+      "id": 2,
+      "name": "Small",
+      "cost": 8
+    },
+    {
+      "id": 3,
+      "name": "Medium",
+      "cost": 10
+    },
+    {
+      "id": 4,
+      "name": "Large",
+      "cost": 12
+    },
+    {
+      "id": 5,
+      "name": "Extra Large",
+      "cost": 18
+    }
+  ],
+  "cheeses": [
+    {
+      "id": 1,
+      "name": "Mozzarella"
+    },
+    {
+      "id": 2,
+      "name": "Buffalo Mozzarella"
+    },
+    {
+      "id": 3,
+      "name": "Four Cheese"
+    },
+    {
+      "id": 4,
+      "name": "Vegan"
+    },
+    {
+      "id": 5,
+      "name": "Ricotta"
+    },
+    {
+      "id": 6,
+      "name": "None (cheeseless)"
+    }
+  ],
+  "sauces": [
+    {
+      "id": 1,
+      "name": "Marinara"
+    },
+    {
+      "id": 2,
+      "name": "Arrabbiata"
+    },
+    {
+      "id": 3,
+      "name": "Garlic White"
+    },
+    {
+      "id": 4,
+      "name": "Diavolo"
+    },
+    {
+      "id": 5,
+      "name": "None (sauceless pizza)"
+    }
+  ],
+  "toppings": [
+    {
+      "id": 1,
+      "name": "Sausage + $1",
+      "cost": 1
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni + $1",
+      "cost": 1
+    },
+    {
+      "id": 3,
+      "name": "Mushroom + $0.50",
+      "cost": 0.5
+    },
+    {
+      "id": 4,
+      "name": "Onion + $0.50",
+      "cost": 0.5
+    },
+    {
+      "id": 5,
+      "name": "Green pepper + $0.50",
+      "cost": 0.5
+    },
+    {
+      "id": 6,
+      "name": "Black olive + $0.50",
+      "cost": 0.5
+    },
+    {
+      "id": 7,
+      "name": "Basil + $0.50",
+      "cost": 0.5
+    },
+    {
+      "id": 8,
+      "name": "Extra cheese + $1",
+      "cost": 1
+    }
+  ],
+  "pizzas": [
+    {
+      "id": 1775763732245,
+      "size": "Large",
+      "cheese": "Buffalo Mozzarella",
+      "sauce": "Arrabbiata",
+      "toppings": [
+        "Mushroom + $0.50",
+        "Onion + $0.50"
+      ],
+      "price": 13,
+      "orderId": 3
+    },
+    {
+      "id": 1775764009330,
+      "size": "Medium",
+      "cheese": "Four Cheese",
+      "sauce": "Arrabbiata",
+      "toppings": [
+        "Black olive + $0.50",
+        "Basil + $0.50"
+      ],
+      "price": 11,
+      "orderId": 4
+    },
+    {
+      "id": 1775765108756,
+      "size": "Large",
+      "cheese": "Four Cheese",
+      "sauce": "None (sauceless pizza)",
+      "toppings": [
+        "Extra cheese + $1",
+        "Basil + $0.50",
+        "Black olive + $0.50",
+        "Green pepper + $0.50",
+        "Onion + $0.50",
+        "Mushroom + $0.50",
+        "Pepperoni + $1",
+        "Sausage + $1"
+      ],
+      "price": 17.5,
+      "orderId": 5
+    },
+    {
+      "id": 1775765182649,
+      "size": "Extra Large",
+      "cheese": "Vegan",
+      "sauce": "Garlic White",
+      "toppings": [
+        "Green pepper + $0.50"
+      ],
+      "price": 18.5,
+      "orderId": 6
+    },
+    {
+      "id": 1775835979466,
+      "size": "Medium",
+      "cheese": "Four Cheese",
+      "sauce": "Marinara",
+      "toppings": [
+        "Black olive + $0.50"
+      ],
+      "price": 10.5,
+      "orderId": 7
+    },
+    {
+      "id": 1775836007393,
+      "size": "Extra Large",
+      "cheese": "Buffalo Mozzarella",
+      "sauce": "None (sauceless pizza)",
+      "toppings": [
+        "Onion + $0.50"
+      ],
+      "price": 18.5,
+      "orderId": 7
+    },
+    {
+      "id": 1775837915528,
+      "size": "Medium",
+      "cheese": "Vegan",
+      "sauce": "Garlic White",
+      "toppings": [
+        "Extra cheese + $1"
+      ],
+      "price": 11,
+      "orderId": 8
+    }
+  ],
+  "pizzaToppings": [],
+  "orders": [
+    {
+      "employeeId": 1,
+      "delivererId": null,
+      "date": "4/9/2026",
+      "time": "2:20:52 PM",
+      "tip": "2.75",
+      "tableId": null,
+      "id": 1
+    },
+    {
+      "employeeId": 1,
+      "delivererId": null,
+      "date": "4/9/2026",
+      "time": "2:23:34 PM",
+      "tip": "0.00",
+      "tableId": null,
+      "id": 2
+    },
+    {
+      "employeeId": 1,
+      "delivererId": 4,
+      "date": "4/9/2026",
+      "time": "2:42:45 PM",
+      "tip": "4.50",
+      "tableId": null,
+      "id": 3
+    },
+    {
+      "employeeId": 1,
+      "delivererId": null,
+      "date": "4/9/2026",
+      "time": "2:47:08 PM",
+      "tip": "2.75",
+      "tableId": null,
+      "id": 4
+    },
+    {
+      "employeeId": 1,
+      "delivererId": 2,
+      "date": "4/9/2026",
+      "time": "3:05:22 PM",
+      "tip": "5.63",
+      "tableId": null,
+      "id": 5
+    },
+    {
+      "employeeId": 2,
+      "delivererId": 4,
+      "date": "4/9/2026",
+      "time": "3:06:52 PM",
+      "tip": "5.88",
+      "tableId": null,
+      "id": 6
+    },
+    {
+      "employeeId": 5,
+      "delivererId": 3,
+      "date": "4/10/2026",
+      "time": "10:46:57 AM",
+      "tip": "8.50",
+      "tableId": null,
+      "id": 7
+    },
+    {
+      "employeeId": 5,
+      "delivererId": 3,
+      "date": "4/10/2026",
+      "time": "11:19:29 AM",
+      "tip": "4.00",
+      "tableId": null,
+      "id": 8
+    }
+  ]
+}

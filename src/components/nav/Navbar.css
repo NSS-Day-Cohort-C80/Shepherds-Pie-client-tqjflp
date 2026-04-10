@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: var(--appBackground);
+  margin: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--outline);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    align-items: center;
+    flex: 1;
+  }
+
+.navbar-item {
+  list-style-type: none;
+}
+
+.navbar-item a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--outline);
+  border-radius: 0.5rem;
+  color: var(--dark);
+  background-color: var(--offWhite);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.navbar-item a.active {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.navbar-active a {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.navbar-logout {
+  margin-left: auto;
+}
+
+.navbar-logout button {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.navbar-logout button:hover {
+    opacity: 0.8;
+}
+
+.navbar-title {
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

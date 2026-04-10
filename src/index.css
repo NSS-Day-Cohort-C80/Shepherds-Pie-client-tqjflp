@@ -1,3 +1,21 @@
+:root {
+  --primary: #a10000;
+  --secondary: #ffc629;
+  --info: #be6666;
+  --warning: rgb(216, 61, 61);
+  --white: #ffffff;
+  --offWhite: #f2f2f3;
+  --dark: #3b3b3b;
+  --outline: #c3c0c0;
+  --appBackground: #201e1e;
+  --cardBackground: #d4d4d4;
+  --metaText: #6b6b6b;
+}
+
+* {
+  cursor: url('/IMG_2138.png'), auto;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +28,42 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: #ffa4a48a;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #a10000;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color:  #ffc629;
+}
+
+.btn-warning {
+  background-color: var(--warning);
+}
+
+.btn-warning:hover {
+  background-color: red;
 }
